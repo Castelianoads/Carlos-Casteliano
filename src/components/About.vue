@@ -24,7 +24,7 @@
       <!-- Ícones de Redes Sociais -->
       <div class="flex justify-center md:justify-start space-x-6 mt-4">
         <!-- Site -->
-        <a href="https://www.seusite.com" target="_blank" aria-label="Website">
+        <a href="https://www.carloscasteliano.com.br" target="_blank" aria-label="Website">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700 hover:text-blue-400" fill="none"
             viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -33,21 +33,13 @@
         </a>
 
         <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/seulinkedin" target="_blank" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700 hover:text-blue-600" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M16 8a6 6 0 016 6v7.5a.75.75 0 01-.75.75H17.5a.75.75 0 01-.75-.75v-7.5a3 3 0 10-6 0v7.5a.75.75 0 01-.75.75H8.25a.75.75 0 01-.75-.75V14a6 6 0 016-6zM2.25 7.5A1.5 1.5 0 113.75 9H2.25V7.5zm0 3.75H3.75v7.5H2.25v-7.5z" />
-          </svg>
+        <a href="https://www.linkedin.com/in/carlos-eduardo-casteliano/" target="_blank" aria-label="LinkedIn">
+          <font-awesome-icon :icon="['fab', 'linkedin']" size="2x" />
         </a>
 
         <!-- GitHub -->
-        <a href="https://github.com/seugithub" target="_blank" aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700 hover:text-gray-400" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M12 2.25c-5.387 0-9.75 4.363-9.75 9.75 0 4.312 2.792 7.97 6.675 9.257.487.09.663-.21.663-.467v-1.68c-2.718.593-3.292-1.312-3.292-1.312-.442-1.122-1.08-1.42-1.08-1.42-.884-.605.067-.593.067-.593 1.008.07 1.54 1.038 1.54 1.038.875 1.497 2.293 1.064 2.85.815.09-.634.343-1.064.625-1.31-2.17-.25-4.452-1.086-4.452-4.834 0-1.07.382-1.944 1.01-2.63-.102-.25-.44-1.26.095-2.63 0 0 .826-.266 2.71 1.008a9.431 9.431 0 014.932 0c1.883-1.274 2.71-1.008 2.71-1.008.536 1.37.198 2.38.096 2.63.63.686 1.01 1.56 1.01 2.63 0 3.758-2.285 4.584-4.463 4.83.353.304.666.906.666 1.832v2.71c0 .258.176.558.664.467A9.757 9.757 0 0021.75 12c0-5.387-4.363-9.75-9.75-9.75z" />
-          </svg>
+        <a href="https://github.com/carloscastelianoads" target="_blank" aria-label="GitHub">
+          <font-awesome-icon :icon="['fab', 'github']" size="lg" />
         </a>
 
         <!-- Azure DevOps -->
@@ -60,7 +52,7 @@
         </a>
 
         <!-- Gmail -->
-        <a href="mailto:seuemail@gmail.com" aria-label="Gmail">
+        <a href="mailto:contato@carloscasteliano.com.br" aria-label="Gmail">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700 hover:text-red-500" fill="none"
             viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
