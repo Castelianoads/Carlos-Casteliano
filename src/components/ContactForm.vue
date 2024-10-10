@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="submitForm" class="bg-white shadow-lg rounded-lg p-4 space-y-4">
+  <form @submit.prevent="submitForm" class="container-sm shadow-lg rounded-lg mt-4 px-4 space-y-4">
 
     <FormField name="name">
       <FormItem>
