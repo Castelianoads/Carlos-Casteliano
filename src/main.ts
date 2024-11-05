@@ -13,14 +13,14 @@ library.add(faLinkedin);
 
 const app = createApp(App)
 
-console.log(import.meta.env.MODE)
-if(import.meta.env.MODE === 'production'){
-  app.use(VueGtag, {
-    config: { id: "G-MR8E3B3CQP" }
-  });
-}
-
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(router)
+
+if(import.meta.env.MODE === 'production'){
+  app.use(VueGtag, {
+      config: { id: "G-MR8E3B3CQP" },
+    }, router
+  );
+}
 
 app.mount('#app')

@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { pageview } from 'vue-gtag';
+import VueGtag from "vue-gtag";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,5 +21,13 @@ const router = createRouter({
     // }
   ]
 })
+
+// router.afterEach((to) => {
+//   pageview({
+//     page_path: to.fullPath,
+//     page_title: to.name?.toString(),
+//   });
+// });
+
 
 export default router
