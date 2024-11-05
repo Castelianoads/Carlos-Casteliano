@@ -3,7 +3,7 @@
 @tailwind utilities;
  
 @layer base {
-  /* :root {
+  :root {
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
  
@@ -34,9 +34,9 @@
     --ring: 224 71.4% 4.1%;
  
     --radius: 0.5rem;
-  } */
-  :root {
-    --background: 0 0% 100%; /* Claro */
+  } 
+  /* :root {
+    --background: 0 0% 100%; 
     --foreground: 224 71.4% 4.1%;
 
     --muted: 220 14.3% 95.9%;
@@ -67,8 +67,8 @@
 
     --radius: 0.5rem;
   }
- 
-  /* .dark {
+  */
+  .dark {
     --background: 224 71.4% 4.1%;
     --foreground: 210 20% 98%;
  
@@ -97,24 +97,24 @@
     --destructive-foreground: 210 20% 98%;
  
     --ring: 216 12.2% 83.9%;
-  } */
-  .dark {
-    --background: 0 0% 0%; /* Preto puro #000000 */
-    --foreground: 210 20% 98%; /* Branco para contraste */
+  }
+  /* .dark {
+    --background: 0 0% 0%; 
+    --foreground: 210 20% 98%; 
 
     --muted: 215 27.9% 16.9%;
     --muted-foreground: 217.9 10.6% 64.9%;
 
-    --popover: 0 0% 0%; /* Fundo preto para popover */
+    --popover: 0 0% 0%; 
     --popover-foreground: 210 20% 98%;
 
-    --card: 0 0% 0%; /* Fundo preto para card */
+    --card: 0 0% 0%;
     --card-foreground: 210 20% 98%;
 
-    --border: 215 27.9% 16.9%; /* Cor de borda escura */
+    --border: 215 27.9% 16.9%; 
     --input: 215 27.9% 16.9%;
 
-    --primary: 210 20% 98%; /* Texto claro */
+    --primary: 210 20% 98%; 
     --primary-foreground: 220.9 39.3% 11%;
 
     --secondary: 215 27.9% 16.9%;
@@ -127,7 +127,7 @@
     --destructive-foreground: 210 20% 98%;
 
     --ring: 216 12.2% 83.9%;
-  }
+  } */
 }
  
 @layer base {
