@@ -18,6 +18,8 @@ app.use(router)
 
 if(import.meta.env.MODE === 'production'){
   app.use(VueGtag, {
+    appName: 'Producao Mecanico',
+    pageTrackerScreenviewEnabled: true,
       config: { id: "G-MR8E3B3CQP" },
     }, router
   );
