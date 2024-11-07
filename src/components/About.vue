@@ -21,7 +21,8 @@
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger as-child>
-              <a href="https://www.linkedin.com/in/carlos-eduardo-casteliano/" target="_blank" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/carlos-eduardo-casteliano/" @click="IrPara('Linkedin')"
+                target="_blank" aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="hover:text-gray-500"
                   viewBox="0 0 24 24">
                   <path fill="currentColor"
@@ -108,12 +109,19 @@
 </template>
 
 <script setup lang="ts">
+import { event } from 'vue-gtag';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger
 } from '@/components/ui/tooltip';
+
+function IrPara(path: string): void {
+  event('action', { event_label: 'event_label', event_category: 'event_category', value: 'value', method: 'method' })
+  event('Linkedin', { event_label: path })
+  event('Linkedin', { method: 'Linkedin' })
+}
 
 </script>
 
