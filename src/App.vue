@@ -1,4 +1,8 @@
 <template>
+  <header class="p-4 flex justify-end container">
+    <ThemeToggle />
+  </header>
+
   <HomeView></HomeView>
   <!-- <div class="container mx-auto p-4 my-10">
     <About />
@@ -15,6 +19,7 @@
 </template>
 
 <script setup lang="ts">
+import ThemeToggle from './components/ThemeToggle.vue';
 import HomeView from './views/HomeView.vue';
 
 // import { ref } from 'vue'
