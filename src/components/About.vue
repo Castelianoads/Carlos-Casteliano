@@ -9,6 +9,29 @@
         Carlos Eduardo Casteliano
       </h1>
 
+      <p class="text-base mt-3 max-w-2xl text-justify">
+        Sou desenvolvedor backend especializado em .NET (C#), com sólida experiência na construção de APIs, aplicações
+        web, desktop (Windows Forms) e na integração entre sistemas. Trabalho com ORMs como Entity Framework e Dapper,
+        utilizando bancos de dados Firebird, MySQL e PostgreSQL.
+      </p>
+
+      <p class="text-base mt-3 max-w-2xl text-justify">
+        Tenho domínio em ambientes Linux (com Nginx) e Windows (IIS), além de experiência no frontend com ASP.NET MVC,
+        Vue.js, jQuery, JavaScript, TypeScript, Bootstrap, HTML e CSS.
+      </p>
+
+      <p class="text-base mt-3 max-w-2xl text-justify">
+        Atuo com ferramentas como Azure DevOps, Docker, Git/GitHub e pipelines de CI/CD. Possuo forte conhecimento em
+        padrões de projeto (Design Patterns), princípios SOLID, DDD, Clean Architecture e metodologias ágeis como Scrum
+        e Kanban.
+      </p>
+
+      <p class="text-base mt-3 max-w-2xl text-justify">
+        Gosto de resolver problemas, tive a oportunidade de atuar em projetos desafiadores na empresa que trabalho,
+        estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades. Sempre animado com a
+        oportunidade de contribuir com minha experiência em novos projetos e tenho paixão em desenvolver software.
+      </p>
+
       <div class="flex justify-center md:justify-start space-x-6 mt-4">
         <TooltipProvider>
           <Tooltip>
@@ -96,28 +119,7 @@
           </Tooltip>
         </TooltipProvider>
       </div>
-      <p class="text-base mt-4 max-w-2xl text-justify">
-        Sou desenvolvedor backend especializado em .NET (C#), com sólida experiência na construção de APIs, aplicações
-        web, desktop (Windows Forms) e na integração entre sistemas. Trabalho com ORMs como Entity Framework e Dapper,
-        utilizando bancos de dados Firebird, MySQL e PostgreSQL.
-      </p>
 
-      <p class="text-base mt-4 max-w-2xl text-justify">
-        Tenho domínio em ambientes Linux (com Nginx) e Windows (IIS), além de experiência no frontend com ASP.NET MVC,
-        Vue.js, jQuery, JavaScript, TypeScript, Bootstrap, HTML e CSS.
-      </p>
-
-      <p class="text-base mt-3 max-w-2xl text-justify">
-        Atuo com ferramentas como Azure DevOps, Docker, Git/GitHub e pipelines de CI/CD. Possuo forte conhecimento em
-        padrões de projeto (Design Patterns), princípios SOLID, DDD, Clean Architecture e metodologias ágeis como Scrum
-        e Kanban.
-      </p>
-
-      <p class="text-base mt-3 max-w-2xl text-justify">
-        Gosto de resolver problemas, tive a oportunidade de atuar em projetos desafiadores na empresa que trabalho,
-        estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades. Sempre animado com a
-        oportunidade de contribuir com minha experiência em novos projetos e tenho paixão em desenvolver software.
-      </p>
     </div>
   </div>
 
