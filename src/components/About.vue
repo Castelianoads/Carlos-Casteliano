@@ -1,20 +1,35 @@
 <template>
-  <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-    <div class="md:w-1/2 flex justify-center">
-      <img src="../assets/carlos_img.jpg.jpg" alt="Minha Foto" class="rounded-full w-48 h-48 object-cover" />
+  <div class="flex flex-col md:flex-row items-center font-sans gap-8">
+    <div class="md:w-1/2 flex flex-col items-center">
+      <img src="../assets/carlos.jpg" alt="Minha Foto" class="w-60 h-60 rounded-full shadow-md" />
     </div>
 
-    <div class="md:w-1/2 text-center md:text-left">
+    <div class=" md:w-4/6 text-center md:text-left">
       <h1 class="text-4xl font-bold mb-4 break-words md:whitespace-nowrap">
         Carlos Eduardo Casteliano
       </h1>
-      <!-- <p class="text-lg">
-        Sou desenvolvedor com experiência em diversas linguagens e tecnologias, incluindo
-        JavaScript, TypeScript, Vue.js, Tailwind CSS, Flutter, C#, e muito mais.
-      </p> -->
 
-      <p class="text-lg">
-        Em desenvolvimento
+      <p class="text-base mt-3 max-w-2xl text-justify">
+        Sou desenvolvedor backend especializado em .NET (C#), com sólida experiência na construção de APIs, aplicações
+        web, desktop (Windows Forms) e na integração entre sistemas. Trabalho com ORMs como Entity Framework e Dapper,
+        utilizando bancos de dados Firebird, MySQL e PostgreSQL.
+      </p>
+
+      <p class="text-base mt-3 max-w-2xl text-justify">
+        Tenho domínio em ambientes Linux (com Nginx) e Windows (IIS), além de experiência no frontend com ASP.NET MVC,
+        Vue.js, jQuery, JavaScript, TypeScript, Bootstrap, HTML e CSS.
+      </p>
+
+      <p class="text-base mt-3 max-w-2xl text-justify">
+        Atuo com ferramentas como Azure DevOps, Docker, Git/GitHub e pipelines de CI/CD. Possuo forte conhecimento em
+        padrões de projeto (Design Patterns), princípios SOLID, DDD, Clean Architecture e metodologias ágeis como Scrum
+        e Kanban.
+      </p>
+
+      <p class="text-base mt-3 max-w-2xl text-justify">
+        Gosto de resolver problemas, tive a oportunidade de atuar em projetos desafiadores na empresa que trabalho,
+        estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades. Sempre animado com a
+        oportunidade de contribuir com minha experiência em novos projetos e tenho paixão em desenvolver software.
       </p>
 
       <div class="flex justify-center md:justify-start space-x-6 mt-4">
@@ -104,8 +119,10 @@
           </Tooltip>
         </TooltipProvider>
       </div>
+
     </div>
   </div>
+
 </template>
 
 <script setup lang="ts">
