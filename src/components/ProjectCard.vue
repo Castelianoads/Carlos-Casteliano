@@ -1,41 +1,25 @@
 <template>
-  <div class="flex justify-center p-3">
-    <Card class=" max-w-[450px]">
+  <div class="w-full flex justify-center font-sans">
+    <Card
+      class="w-full max-w-xl rounded-2xl shadow-lg border transition hover:shadow-xl hover:-translate-y-1 duration-300 ">
       <CardHeader>
-        <CardTitle>{{ project.name }}</CardTitle>
-        <CardDescription>Descrição</CardDescription>
+        <CardTitle class="text-2xl font-bold ">{{ project.name }}</CardTitle>
+        <CardDescription class="text-sm mt-1">
+          {{ project.description }}
+        </CardDescription>
       </CardHeader>
-      <!--<CardContent>
-          <p>{{ project.description }}</p>
-           <div class="grid items-center w-full gap-4">
-          <div class="flex flex-col space-y-1.5">
-            <p class="text-gray-600 mb-4">{{ project.description }}</p>
-          </div>
-        </div>
-      </CardContent> -->
-      <CardFooter class="flex justify-between  pb-6">
-        <Button @click="irPara(project.website)">Visitar site</Button>
-        <Button @click="irPara(project.github)" variant="outline">
+
+      <CardFooter class="flex flex-col md:flex-row gap-4 sm:justify-between mt-4">
+        <Button @click="irPara(project.website)" class="w-full md:w-auto">
+          Visitar site
+        </Button>
+        <Button @click="irPara(project.github)" variant="outline" class="w-full md:w-auto">
           GitHub
         </Button>
       </CardFooter>
     </Card>
-    <!--<div class="bg-white shadow-lg rounded-lg p-4 border border-gray-300 max-w-md w-full">
-      <h3 class="text-xl font-bold mb-2">{{ project.name }}</h3>
-      <p class="text-gray-600 mb-4">{{ project.description }}</p>
-      <div class="flex justify-between">
-        <Button @click="">
-          Visitar site
-        </Button>
-       
-        <Button @click="" variant="secondary">
-          GitHub
-        </Button>       
-      </div>
-    </div>-->
   </div>
 </template>
-
 <script setup lang="ts">
 import { Button } from '@/components/ui/button'
 import {
