@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '@/lib/views/HomeView.vue'
 import { pageview } from 'vue-gtag';
 import VueGtag from "vue-gtag";
 
@@ -8,8 +8,14 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Página Inicial',
       component: HomeView
+    },
+    {
+      path: '/Contato',
+      name: 'Contato',
+
+      component: () => import('@/lib/views/ContactView.vue')
     },
     // {
     //   path: '/about',

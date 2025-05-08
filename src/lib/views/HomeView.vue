@@ -1,12 +1,12 @@
 <template>
-  <div class="container font-sans py-4">
+  <div class="container font-sans p-4">
     <!-- Perfil -->
     <About></About>
 
     <!-- Tecnologias -->
     <section class="py-4">
-      <h2 class="text-2xl font-semibold mb-3">Tecnologias</h2>
-      <div class="grid grid-cols-4 md:grid-cols-8 gap-4 justify-items-center">
+      <h2 class="text-2xl font-semibold">Tecnologias</h2>
+      <div class="grid grid-cols-4 md:grid-cols-8 gap-4 justify-items-center mt-3">
         <div v-for="tech in techs" :key="tech.label" class="text-center">
           <FontAwesomeIcon :icon="tech.icon" class="text-4xl" />
           <p class="text-xs mt-1">{{ tech.label }}</p>
@@ -15,12 +15,13 @@
     </section>
 
     <!-- Projetos -->
-    <section class="py-4">
-      <h2 class="text-2xl font-semibold mb-3">Meus Projetos</h2>
-      <div class="grid md:grid-cols-2 gap-6">
+    <section class="py-5">
+      <h2 class="text-2xl font-semibold">Meus Projetos</h2>
+      <div class="grid md:grid-cols-2 gap-6 mt-3">
         <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
       </div>
     </section>
+
 
     <!-- Contato -->
     <ContactForm></ContactForm>
@@ -67,14 +68,14 @@ const projects = ref([
   {
     id: 1,
     name: 'Produção Mecânico WEB',
-    description: 'Descrição do projeto',
+    description: 'Site de gestão de serviços para mecânicos: registre, acompanhe e analise serviços realizados, visualize relatórios e gráficos mensais, compare metas e resultados financeiros com praticidade.',
     website: 'https://producaomecanico.carloscasteliano.com.br',
     github: 'https://github.com/Castelianoads/Producao-Mecanico-Web'
   },
   {
     id: 2,
     name: 'Produção Mecânico Android/IOS',
-    description: 'Descrição do projeto',
+    description: 'Aplicativo de gestão de serviços para mecânicos: registre com foto, acompanhe e analise serviços realizados, visualize relatórios e gráficos mensais, compare metas e resultados financeiros com praticidade.',
     website: 'https://producaomecanico.carloscasteliano.com.br',
     github: 'https://github.com/Castelianoads/Producao-Mecanico-App-Flutter'
   }

@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import ThemeToggle from './components/ThemeToggle.vue';
-import HomeView from './views/HomeView.vue';
+import HomeView from './lib/views/HomeView.vue';
 </script>
 
 <style scoped></style>
