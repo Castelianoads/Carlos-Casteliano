@@ -17,7 +17,7 @@ app.use(router)
 
 if(import.meta.env.MODE === 'production'){
   app.use(VueGtag, {
-    appName: 'Producao Mecanico',
+    appName: 'Carlos Casteliano',    
     pageTrackerScreenviewEnabled: true,
       config: { id: "G-MR8E3B3CQP" },
     }, router

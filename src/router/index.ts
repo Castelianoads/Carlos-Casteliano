@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/lib/views/HomeView.vue'
+import HomeView from '@/views/HomeView.vue'
 import { pageview } from 'vue-gtag';
 import VueGtag from "vue-gtag";
 
@@ -15,7 +15,7 @@ const router = createRouter({
       path: '/Contato',
       name: 'Contato',
 
-      component: () => import('@/lib/views/ContactView.vue')
+      component: () => import('@/views/ContactView.vue')
     },
     // {
     //   path: '/about',

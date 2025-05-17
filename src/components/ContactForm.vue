@@ -59,7 +59,7 @@
 import { Button } from '@/components/ui/button';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import ContactRepository from '@/lib/data/ContactRepository';
+import ContactRepository from '@/data/ContactRepository';
 import type Contact from '@/lib/domain/models/Contact';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
