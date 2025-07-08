@@ -12,11 +12,15 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/Contato',
-      name: 'Contato',
-
-      component: () => import('@/views/ContactView.vue')
+      path: '/administrador',
+      name: 'administrador',
+      component: () => import('@/views/AdministratorView.vue')
     },
+    {
+      path: '/musica',
+      name: 'musica',
+      component: () => import('@/views/MusicasView.vue')
+    }
     // {
     //   path: '/about',
     //   name: 'about',

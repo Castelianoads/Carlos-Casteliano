@@ -1,14 +1,16 @@
 <template>
   <header class="p-4 flex justify-end container">
-    <ThemeToggle />
+    <NavBar />
   </header>
 
-  <HomeView></HomeView>
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <script setup lang="ts">
-import ThemeToggle from './components/ThemeToggle.vue';
-import HomeView from './views/HomeView.vue';
+import NavBar from './components/NavBar.vue';
+
 </script>
 
 <style scoped></style>

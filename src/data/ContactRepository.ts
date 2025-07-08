@@ -1,5 +1,5 @@
-import type IContactRepository from "../lib/domain/interfaces/IContactRepository";
-import type Contact from "../lib/domain/models/Contact";
+import type IContactRepository from "../domain/interfaces/IContactRepository";
+import type Contact from "../domain/models/Contact";
 
 
 const urlEndpontContactApi = 'https://carloscasteliano.com.br:5000/Api/v1/Contato';
