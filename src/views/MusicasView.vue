@@ -38,7 +38,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import axios from 'axios';
 import { Button } from '@/components/ui/button'
@@ -53,7 +53,7 @@ function addInput() {
   }
 }
 
-function removeInput(index) {
+function removeInput(index: number) {
   if (urls.value.length > 1) {
     urls.value.splice(index, 1)
   }
@@ -68,7 +68,7 @@ async function baixarMusicas() {
     if (linksValidos.length === 1) {
       const response = await axios.post(
         'http://carloscasteliano:8000/baixar', 
-        { url: linksValidos[0].split('&list=') },
+        { url: linksValidos[0] },
         { responseType: 'blob' }
       )
       console.log(response)
