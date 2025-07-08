@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col md:flex-row items-center font-sans gap-8">
     <div class="md:w-1/2 flex flex-col items-center">
-      <img src="../assets/carlos.jpg" alt="Minha Foto" class="w-60 h-60 rounded-full shadow-md" />
+      <img src="../../assets/carlos.jpg" alt="Minha Foto" class="w-60 h-60 rounded-full shadow-md" />
     </div>
 
     <div class=" md:w-4/6 text-center md:text-left">
@@ -127,9 +127,7 @@ function IrPara(path: string): void {
 </script>
 
 <style scoped>
-/* Para garantir que o texto caiba em uma linha no celular */
 h1 {
   word-wrap: break-word;
-  /* Impede a quebra de palavras grandes */
 }
 </style>

@@ -45,16 +45,19 @@ import {
 const isDark = ref(false)
 
 onMounted(() => {
-  isDark.value = document.body.classList.contains('dark')
+  var theme = localStorage.getItem("theme");
+  if (theme != null) {
+    isDark.value = theme == 'dark';
+  }
 })
 
 function toggleTheme() {
   isDark.value = !isDark.value
   if (isDark.value) {
-    document.body.classList.add('dark')
+    document.documentElement.classList.add('dark')
     localStorage.setItem('theme', 'dark')
   } else {
-    document.body.classList.remove('dark')
+    document.documentElement.classList.remove('dark')
     localStorage.setItem('theme', 'light')
   }
 }

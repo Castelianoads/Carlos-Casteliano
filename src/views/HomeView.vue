@@ -22,7 +22,6 @@
       </div>
     </section>
 
-
     <!-- Contato -->
     <ContactForm></ContactForm>
   </div>
@@ -30,9 +29,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import ProjectCard from '@/components/ProjectCard.vue';
-import ContactForm from '@/components/ContactForm.vue';
-import About from '@/components/About.vue';
+import ProjectCard from '@/components/home/ProjectCard.vue';
+import ContactForm from '@/components/home/ContactForm.vue';
+import About from '@/components/home/About.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -48,6 +47,24 @@ import {
   faFlutter,
   faBootstrap,
 } from '@fortawesome/free-brands-svg-icons'
+import { Button } from '@/components/ui/button'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
 library.add(faHtml5, faCss3, faNodeJs, faLinux, faDocker, faGitAlt, faJs, faVuejs, faGithub, faFlutter, faBootstrap)
 

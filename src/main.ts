@@ -7,8 +7,10 @@ import VueGtag from "vue-gtag";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Importa o ícone do LinkedIn
+import { applyStoredTheme } from './lib/utils/theme';
 
 library.add(faLinkedin);
+applyStoredTheme();
 
 const app = createApp(App)
 
@@ -17,7 +19,7 @@ app.use(router)
 
 if(import.meta.env.MODE === 'production'){
   app.use(VueGtag, {
-    appName: 'Producao Mecanico',
+    appName: 'Carlos Casteliano',    
     pageTrackerScreenviewEnabled: true,
       config: { id: "G-MR8E3B3CQP" },
     }, router
