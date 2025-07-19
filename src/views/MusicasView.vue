@@ -3,101 +3,71 @@
     <h1 class="text-xl font-bold text-center">Baixar música</h1>
 
     <div class="w-full space-y-2">
-      <div
-        v-for="(url, index) in urls"
-        :key="index"
-        class="flex items-center space-x-2"
-      >
-        <Input
-          v-model="urls[index]"
-          placeholder="Insira o link"
-          class="flex-1"
-        />
-        <Button
-          v-if="index === urls.length - 1 && urls.length < 5"
-          variant="outline"
-          size="icon"
-          @click="addInput"
-        >
+      <div v-for="(url, index) in urls" :key="index" class="flex items-center space-x-2">
+        <Input v-model="urls[index]" placeholder="Insira o link" class="flex-1" />
+        <Button v-if="index === urls.length - 1 && urls.length < 5" variant="outline" size="icon" @click="addLink">
           <Plus class="h-4 w-4" />
         </Button>
-        <Button
-          v-else
-          variant="destructive"
-          size="icon"
-          @click="removeInput(index)"
-        >
+        <Button v-else variant="destructive" size="icon" @click="removeLink(index)">
           <Minus class="h-4 w-4" />
         </Button>
       </div>
     </div>
 
-    <Button class="w-full mt-4" @click="baixarMusicas">
+    <Button class="w-full mt-4" @click="downloadMusic">
       Baixar
     </Button>
+
+    <div class=" px-8">
+      <AlertDialog v-model:open="showDialog">
+        <AlertDialogTrigger>Open</AlertDialogTrigger>
+        <AlertDialogContent>
+          <AlertDialogTitle class="text-center mb-3">{{ dialogMessage }}</AlertDialogTitle>
+          <AlertDialogAction>Ok</AlertDialogAction>
+        </AlertDialogContent>
+      </AlertDialog>
+    </div>
+
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import axios from 'axios';
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Plus, Minus } from 'lucide-vue-next'
+import { ref } from 'vue';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Plus, Minus } from 'lucide-vue-next';
+import MusicRepository from '@/data/MusicRepository';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
 
 const urls = ref([''])
+const musicResopitory = new MusicRepository();
+const showDialog = ref(false);
+const dialogMessage = ref('');
 
-function addInput() {
+function addLink() {
   if (urls.value.length < 5) {
-    urls.value.push('')
+    urls.value.push('');
   }
 }
 
-function removeInput(index: number) {
+function removeLink(index: number) {
   if (urls.value.length > 1) {
-    urls.value.splice(index, 1)
+    urls.value.splice(index, 1);
   }
 }
 
-async function baixarMusicas() {
-  const linksValidos = urls.value.filter(url => url.trim() !== '')
-  
+async function downloadMusic() {
+  const linksValidos: String[] = urls.value.filter(url => url.trim() !== '');
+  const resposta: boolean = await musicResopitory.DownloadMusicAsync(linksValidos);
 
-  console.log('Baixando os seguintes links:', linksValidos)
-  try {
-    if (linksValidos.length === 1) {
-      const response = await axios.post(
-        'http://carloscasteliano:8000/baixar', 
-        { url: linksValidos[0] },
-        { responseType: 'blob' }
-      )
-      console.log(response)
-      const blob = new Blob([response.data], { type: 'audio/mpeg' })
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = 'musica.mp3'
-      a.click()
-      URL.revokeObjectURL(url)
-    } else {
-      const response = await axios.post(
-        'http://carloscasteliano:8000/baixarVarios',
-        { urls: linksValidos },
-        { responseType: 'blob' }
-      )
-      console.log(response)
-      const blob = new Blob([response.data], { type: 'application/zip' })
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = 'musicas.zip'
-      a.click()
-      URL.revokeObjectURL(url)
-    }
-  } catch (err) {
-    console.log(err);
-    alert('Erro ao baixar músicas.')
-  }
+  dialogMessage.value = resposta ? 'Música baixada com sucesso!' : 'Erro ao baixar música.';
+  showDialog.value = true;
 }
 </script>
 

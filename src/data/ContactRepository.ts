@@ -2,13 +2,13 @@ import type IContactRepository from "../domain/interfaces/IContactRepository";
 import type Contact from "../domain/models/Contact";
 
 
-const urlEndpontContactApi = 'https://carloscasteliano.com.br:5000/Api/v1/Contato';
+const urlEndpontContact = 'https://carloscasteliano.com.br:5000/Api/v1/Contato';
 
 class ContactRepository implements IContactRepository {
   
   async SendContactEmailAsync(contact: Contact): Promise<boolean> {
     try {
-      const response = await fetch(urlEndpontContactApi, {
+      const response = await fetch(urlEndpontContact, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
