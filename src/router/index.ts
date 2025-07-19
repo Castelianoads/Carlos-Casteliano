@@ -17,8 +17,8 @@ const router = createRouter({
       component: () => import('@/views/AdministratorView.vue')
     },
     {
-      path: '/musica',
-      name: 'musica',
+      path: '/musicas',
+      name: 'musicas',
       component: () => import('@/views/MusicasView.vue')
     }
     // {
