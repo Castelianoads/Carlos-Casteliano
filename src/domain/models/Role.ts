@@ -1,11 +1,14 @@
+import type UserRoles from "./UserRoles";
 
 class Role{
-  id: string;
-  name: string;
+  id: string | null;
+  name: string | null;
+  userRoles: UserRoles[];   
 
-  constructor(id: string, name: string) {
+  constructor(id: string | null, name: string | null, userRoles: UserRoles[]) {
     this.id = id;
     this.name = name;
+    this.userRoles = userRoles;
   }
 }
 

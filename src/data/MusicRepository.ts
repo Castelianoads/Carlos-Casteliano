@@ -1,15 +1,16 @@
 import type IMusicRepository from "@/domain/interfaces/IMusicRepository";
-import axios from "axios";
+import { AxiosConfig } from "@/settings/AxiosConfig";
 
-const urlEndpontMusic = 'https://carloscasteliano.com.br:8000/';
+const urlServer = 'http://localhost:8080';
+//const urlServer = 'https://carloscasteliano.com.br:5000';
 
 class MusicRepository implements IMusicRepository {  
-  async DownloadMusicAsync(links: String[]): Promise<boolean> {
+  async DownloadMusicAsync(link: String): Promise<boolean> {
+    console.log("Entrou DownloadMusicAsync");
     try {
-      if (links.length === 1) {
-        const response = await axios.post(
-          urlEndpontMusic + 'baixar', 
-          { url: links[0] },
+      const response = await AxiosConfig.post(
+        urlServer,
+        { url: link },
           { responseType: 'blob' }
         )
         const blob = new Blob([response.data], { type: 'audio/mpeg' })
@@ -24,12 +25,21 @@ class MusicRepository implements IMusicRepository {
           if (match) filename = match[1];
         }
         a.download = filename;
-                
-        a.click()
-        URL.revokeObjectURL(url)
-      } else {
-        const response = await axios.post(
-          urlEndpontMusic + 'baixarVarios',
+      console.log(filename);
+
+      a.click()
+      URL.revokeObjectURL(url)
+      return true;
+    } catch (err) {
+      console.log(err);
+      return false;
+    }
+  }
+
+  async DownloadMusicsAsync(links: String[]): Promise<boolean> {
+    try {
+      const response = await AxiosConfig.post(
+        urlServer + '/lista',
           { urls: links },
           { responseType: 'blob' }
         )
@@ -39,8 +49,7 @@ class MusicRepository implements IMusicRepository {
         a.href = url
         a.download = 'musicas.zip'
         a.click()
-        URL.revokeObjectURL(url)
-      }
+      URL.revokeObjectURL(url)
       return true;
     } catch (err) {
       return false;

@@ -1,5 +1,6 @@
 
 
 export default interface IMusicRepository {
-  DownloadMusicAsync(links: String[]): Promise<boolean>;  
+  DownloadMusicAsync(link: String): Promise<boolean>;
+  DownloadMusicsAsync(links: String[]): Promise<boolean>;
 }
