@@ -11,22 +11,22 @@ console.log('administrador');
 async function getData(): Promise<User[]> {
   // Fetch data from your API here.
   return [
-    {
-      id: '3ee41b28-9409-41e4-acc3-01b4a65dd0e2',
-      name: 'Carlos Eduardo Casteliano',
-      birthDate: new Date(1996, 3, 18),
-      isActive: true,
-      isEmailConfirmed: true,
-      isPhoneConfirmed: true
-    },
-    {
-      id: '324be664-cca0-4136-a151-33474e452740',
-      name: 'Jailson Quirino de Paula',
-      birthDate: new Date(1969, 7, 20),
-      isActive: true,
-      isEmailConfirmed: true,
-      isPhoneConfirmed: true
-    },
+    // {
+    //   id: '3ee41b28-9409-41e4-acc3-01b4a65dd0e2',
+    //   name: 'Carlos Eduardo Casteliano',
+    //   birthDate: new Date(1996, 3, 18),
+    //   isActive: true,
+    //   isEmailConfirmed: true,
+    //   isPhoneConfirmed: true
+    // },
+    // {
+    //   id: '324be664-cca0-4136-a151-33474e452740',
+    //   name: 'Jailson Quirino de Paula',
+    //   birthDate: new Date(1969, 7, 20),
+    //   isActive: true,
+    //   isEmailConfirmed: true,
+    //   isPhoneConfirmed: true
+    // },
   ]
 }
 
