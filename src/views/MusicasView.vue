@@ -19,7 +19,7 @@
     </Button>
 
     <div class=" px-8">
-      <AlertDialog v-model:open="showDialog">
+      <AlertDialog v-model:open="showDialog" class="px-8">
         <AlertDialogTrigger>Open</AlertDialogTrigger>
         <AlertDialogContent>
           <AlertDialogTitle class="text-center mb-3">{{ dialogMessage }}</AlertDialogTitle>
@@ -64,7 +64,16 @@ function removeLink(index: number) {
 
 async function downloadMusic() {
   const linksValidos: String[] = urls.value.filter(url => url.trim() !== '');
-  const resposta: boolean = await musicResopitory.DownloadMusicAsync(linksValidos);
+  var resposta: boolean = false;
+
+  console.log("Entrou");
+  if (linksValidos.length == 1) {
+    console.log("Entrou 1");
+    resposta = await musicResopitory.DownloadMusicAsync(linksValidos[0]);
+  } else {
+    console.log("Entrou 2");
+    resposta = await musicResopitory.DownloadMusicsAsync(linksValidos);
+  }
 
   dialogMessage.value = resposta ? 'Música baixada com sucesso!' : 'Erro ao baixar música.';
   showDialog.value = true;

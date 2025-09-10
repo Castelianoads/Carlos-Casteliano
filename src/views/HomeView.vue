@@ -84,18 +84,18 @@ const techs = [
 const projects = ref([
   {
     id: 1,
-    name: 'Produção Mecânico WEB',
-    description: 'Site de gestão de serviços para mecânicos: registre, acompanhe e analise serviços realizados, visualize relatórios e gráficos mensais, compare metas e resultados financeiros com praticidade.',
+    name: 'Produção Mecânico',
+    description: 'Aplicativo de gestão de serviços para mecânicos: registre, acompanhe e analise serviços realizados, visualize relatórios e gráficos mensais, compare metas e resultados financeiros com praticidade.',
     website: 'https://producaomecanico.carloscasteliano.com.br',
     github: 'https://github.com/Castelianoads/Producao-Mecanico-Web'
   },
-  {
-    id: 2,
-    name: 'Produção Mecânico Android/IOS',
-    description: 'Aplicativo de gestão de serviços para mecânicos: registre com foto, acompanhe e analise serviços realizados, visualize relatórios e gráficos mensais, compare metas e resultados financeiros com praticidade.',
-    website: 'https://producaomecanico.carloscasteliano.com.br',
-    github: 'https://github.com/Castelianoads/Producao-Mecanico-App-Flutter'
-  }
+  // {
+  //   id: 2,
+  //   name: 'Produção Mecânico Android/IOS',
+  //   description: 'Aplicativo de gestão de serviços para mecânicos: registre com foto, acompanhe e analise serviços realizados, visualize relatórios e gráficos mensais, compare metas e resultados financeiros com praticidade.',
+  //   website: 'https://producaomecanico.carloscasteliano.com.br',
+  //   github: 'https://github.com/Castelianoads/Producao-Mecanico-App-Flutter'
+  // }
 ]);
 
 const form = ref({
